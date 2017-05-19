@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Sureify — Coke Studio</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">	
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js'></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="script.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="jquery-ui.css">
+</head>
+<body>
+	<header>
+		<h1>Sureify — Coke Studio</h1>
+		<div class="s-s-f">
+		<div class="search">
+			<label for="search">Search </label>
+			<input id="search" placeholder="Search By Name">
+		</div>		
+	</div>
+	</header>
+	
+	<div class="card container">
+		<div class="rows" id="cards">
+		</div>
+	</div>
+	<div class="player">
+		<img class="cover-img">
+		<a role="button" class="player-btn glyphicon glyphicon-fast-backward" id="bkwd"></a>
+		<a role="button" class="player-btn glyphicon glyphicon-play" id="play-btn"></a>
+		<a role="button" class="player-btn glyphicon glyphicon-fast-forward" id="frwd"></a>
+		<dvi id="slider"></dvi>
+		<p id="timer"></p>
+		<a role='button' class="player-btn glyphicon glyphicon-volume-up" id="volume"></a>
+		<a role='button' class="player-btn glyphicon glyphicon-download" id="dwnld-btn" title="Download" href="Amnesia.mp3" download></a>
+		<!--<audio id="song"></audio>-->
+		<div class="player-btn"></div>
+		<div class="player-btn"></div>
+		<!--<audio controls="controls" id="audio-player">
+  			<source src="Amnesia.ogg" type="audio/ogg" />
+  			<source src="Amnesia.mp3" type="audio/mpeg" />
+  		</audio>
+	</div>
+	<script type="text/javascript">
+		$('span').click(function(){
+            $(this).toggleClass('ion-android-favorite ion-android-favorite-outline');
+            console.log('Hello');
+        }); 
+	</script>-->
+</body>
+</html>
