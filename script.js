@@ -13,7 +13,14 @@ var searchTxt,min=0,sec=0, availableTags = [],cover=[],songURL=[],index=0,durati
             $('#dwnld-btn').attr('href',songURL[0]);
     		for (var j =  0; j<=i; j++) {    				
     				if (j==i) {
-    					$('#cards').append("<div class='col-md-4'><a role='button' href='#' id='card-"+j+"' class='card-layout'><img src='"+img+"'><h1 class='title'>"+title+"</h1><p>Artists: "+artist+"</p></a></div>");
+    					$('#cards').append("<div class='col-md-4'><a role='button' id='"+j+"' class='card-layout'><img src='"+img+"'><h1 class='title'>"+title+"</h1><p>Artists: "+artist+"</p></a></div>");
+                        document.getElementById(j).addEventListener('click',function(){
+                            index=parseInt($(this).attr('id'));
+                            audio.src=songURL[index];
+                            audio.play();
+                            $('.cover-img').attr('src',cover[index]);
+                            $('#play-btn').toggleClass('glyphicon-play glyphicon-pause');
+                        });
     				}    			
     		}
             availableTags[i]=title;
@@ -75,6 +82,7 @@ var searchTxt,min=0,sec=0, availableTags = [],cover=[],songURL=[],index=0,durati
         index++;
         audio.src = songURL[index];
         audio.play();
+        $('.cover-img').attr('src',cover[index]);
         $('#play-btn').toggleClass('glyphicon-play glyphicon-pause');
         }
     });
@@ -89,9 +97,7 @@ var searchTxt,min=0,sec=0, availableTags = [],cover=[],songURL=[],index=0,durati
             sec= sec>9?sec:'0'+sec;
             $('#timer').text(min+':'+sec);
         }
-        durationTime=audio.duration;
-    console.log(durationTime);
-    
+        durationTime=audio.duration;    
     }
     $('#volume').click(function(){
         $(this).toggleClass('glyphicon-volume-up glyphicon-volume-off');
