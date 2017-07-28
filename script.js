@@ -1,6 +1,6 @@
 $(document).ready(function(){
 var searchTxt,min=0,sec=0, availableTags = [],cover=[],songURL=[],index=0,durationTime;
-    $.getJSON('http://starlord.hackerearth.com/sureify/cokestudio').done(function(data){
+    $.getJSON('https://crossorigin.me/http://starlord.hackerearth.com/sureify/cokestudio').done(function(data){
     	for (var i = 0; i < data.length; i++) {    		
     		var title= data[i]['song'],
     			artist = data[i]['artists'],
